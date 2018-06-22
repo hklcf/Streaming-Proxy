@@ -1,4 +1,10 @@
 # Streaming-Proxy
+[![GitHub issues](https://img.shields.io/github/issues/hklcf/Streaming-Proxy.svg)](https://github.com/hklcf/Streaming-Proxy/issues)
+[![GitHub forks](https://img.shields.io/github/forks/hklcf/Streaming-Proxy.svg)](https://github.com/hklcf/Streaming-Proxy/network)
+[![GitHub stars](https://img.shields.io/github/stars/hklcf/Streaming-Proxy.svg)](https://github.com/hklcf/Streaming-Proxy/stargazers)
+[![GitHub license](https://img.shields.io/github/license/hklcf/Streaming-Proxy.svg)](https://github.com/hklcf/Streaming-Proxy/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/hklcf/Streaming-Proxy.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fhklcf%2FStreaming-Proxy)
+
 Proxy any video streaming🎬
 
 ## Getting Started
