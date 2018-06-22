@@ -9,6 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 - Nginx
 
 ## Deployment
+***You must install Nginx to your system first.*** https://nginx.org/en/linux_packages.html#stable
+
 Download the latest version of Streaming-Proxy.
 ```bash
 yum -y install epel-release screen unzip
@@ -16,6 +18,47 @@ curl -o streaming-proxy.zip https://github.com/hklcf/Streaming-Proxy/archive/v1.
 unzip streaming-proxy.zip
 cd streaming-proxy
 chmod 755 stream.sh
+```
+
+### Server tuning
+In order to allow the proxy servers to fully utilize their resources, several adjustments should be made.
+
+*tune global limits*
+
+add to `/etc/sysctl.conf`
+```
+fs.inotify.max_user_instances=1048576
+fs.inotify.max_user_watches=1048576
+fs.nr_open=1048576
+net.core.netdev_max_backlog=1048576
+net.core.rmem_max=16777216
+net.core.somaxconn=65535
+net.core.wmem_max=16777216
+net.ipv4.ip_local_port_range=1024 65535
+net.ipv4.netfilter.ip_conntrack_max=1048576
+net.ipv4.tcp_fin_timeout=5
+net.ipv4.tcp_max_orphans=1048576
+net.ipv4.tcp_max_syn_backlog=20480
+net.ipv4.tcp_max_tw_buckets=400000
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_rmem=4096 87380 16777216
+net.ipv4.tcp_synack_retries=2
+net.ipv4.tcp_syn_retries=2
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_wmem=4096 65535 16777216
+net.nf_conntrack_max=1048576
+```
+
+*tune user limits*
+
+add to `/etc/security/limits.conf`
+```
+*               soft    nofile          1048576
+*               hard    nofile          1048576
+*               soft    nproc          1048576
+*               hard    nproc          1048576
+*               soft    memlock         unlimited
+*               hard    memlock         unlimited
 ```
 
 ## Usage
