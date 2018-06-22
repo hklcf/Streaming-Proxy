@@ -13,10 +13,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 Download the latest version of Streaming-Proxy.
 ```bash
-yum -y install epel-release screen unzip
-curl -o streaming-proxy.zip https://github.com/hklcf/Streaming-Proxy/archive/v1.0.0.zip
-unzip streaming-proxy.zip
-cd streaming-proxy
+yum -y install epel-release screen git
+git clone https://github.com/hklcf/Streaming-Proxy.git --branch v1.0.0
+cd Streaming-Proxy
 chmod 755 stream.sh
 ```
 
