@@ -1,6 +1,6 @@
 #!/bin/bash
-SOURCE=$1
-STREAM_NAME=$2
+SOURCE="$1"
+STREAM_NAME="$2"
 
 if [ -z $1 ] || [ -z $2 ]
 then
@@ -27,4 +27,4 @@ else
   rm -rf $WEB_PATH/*
 fi
 
-$FFMPEG -y -i "$1" -c copy -copyts -hls_time 10 -hls_flags delete_segments+second_level_segment_index+second_level_segment_size+second_level_segment_duration -use_localtime 1 -hls_segment_filename "$WEB_PATH/segment_%Y%m%d%H%M%S_%%04d_%%08s_%%013t.ts" "$WEB_PATH/playlist.m3u8"
+$FFMPEG -y -i "$SOURCE" -c copy -copyts -hls_time 10 -hls_flags delete_segments+second_level_segment_index+second_level_segment_size+second_level_segment_duration -use_localtime 1 -hls_segment_filename "$WEB_PATH/segment_%Y%m%d%H%M%S_%%04d_%%08s_%%013t.ts" "$WEB_PATH/playlist.m3u8"
