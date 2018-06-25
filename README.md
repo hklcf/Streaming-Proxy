@@ -60,8 +60,8 @@ add to `/etc/security/limits.conf`
 ```
 *               soft    nofile          1048576
 *               hard    nofile          1048576
-*               soft    nproc          1048576
-*               hard    nproc          1048576
+*               soft    nproc           1048576
+*               hard    nproc           1048576
 *               soft    memlock         unlimited
 *               hard    memlock         unlimited
 ```
