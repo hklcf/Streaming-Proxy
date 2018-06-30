@@ -40,7 +40,6 @@ net.core.rmem_max=16777216
 net.core.somaxconn=65535
 net.core.wmem_max=16777216
 net.ipv4.ip_local_port_range=1024 65535
-net.ipv4.netfilter.ip_conntrack_max=1048576
 net.ipv4.tcp_fin_timeout=5
 net.ipv4.tcp_max_orphans=1048576
 net.ipv4.tcp_max_syn_backlog=20480
@@ -51,6 +50,7 @@ net.ipv4.tcp_synack_retries=2
 net.ipv4.tcp_syn_retries=2
 net.ipv4.tcp_tw_reuse=1
 net.ipv4.tcp_wmem=4096 65535 16777216
+net.netfilter.nf_conntrack_max=1048576
 net.nf_conntrack_max=1048576
 ```
 
