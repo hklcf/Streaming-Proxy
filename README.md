@@ -34,6 +34,7 @@ add to `/etc/sysctl.conf`
 ```
 fs.inotify.max_user_instances=1048576
 fs.inotify.max_user_watches=1048576
+fs.file-max=1048576
 fs.nr_open=1048576
 net.core.netdev_max_backlog=1048576
 net.core.rmem_max=16777216
